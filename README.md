@@ -158,7 +158,7 @@ MAPE: 12.34
 CV_R²_mean: 0.9123
 CV_R²_std: 0.0234
 ==================================================
-```
+
 
 ##  Model Persistence
 
@@ -178,8 +178,6 @@ predictor.load_model('my_salary_model_20241201_143022.pkl')
 ##  Sample Data Generation
 
 If you don't have a dataset, the system can generate sample data:
-
-
 from AI_Salary_Pridictor import create_sample_data
 
 # Generate 5000 sample records
