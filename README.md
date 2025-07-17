@@ -21,13 +21,6 @@ The system achieves high accuracy with:
 - **Confidence Intervals**: 15% prediction intervals for uncertainty quantification
 
 ##  Installation
-
-### Prerequisites
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost joblib scipy
-```
-
 ### Required Libraries
 
 - **Data Processing**: pandas, numpy
@@ -37,7 +30,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost joblib scipy
 
 ##  Project Structure
 
-```
+
 AI-Salary-Prediction-Engine/
 ├── AI_Salary_Pridictor.py    # Main prediction engine
 ├── README.md                 # Project documentation
@@ -52,13 +45,11 @@ AI-Salary-Prediction-Engine/
     ├── Figure_7.png         # Top paying jobs
     ├── OUTPUT 1.png         # Model performance
     └── OUTPUT 2.png         # Feature importance
-```
+
 
 ##  Quick Start
 
 ### 1. Basic Usage
-
-```python
 from AI_Salary_Pridictor import OptimizedSalaryPredictor
 import pandas as pd
 
@@ -85,17 +76,10 @@ user_input = {
 
 prediction = predictor.predict_with_confidence(user_input)
 print(f"Predicted Salary: ${prediction['predicted_salary']:,.2f}")
-```
 
 ### 2. Command Line Interface
 
 Run the main script for interactive predictions:
-
-```bash
-python AI_Salary_Pridictor.py
-```
-
-Follow the prompts to enter job details and get salary predictions.
 
 ##  Input Parameters
 
@@ -110,7 +94,7 @@ Follow the prompts to enter job details and get salary predictions.
 | `remote_ratio` | Remote work percentage | 0 (On-site), 50 (Hybrid), 100 (Remote) |
 | `employment_type` | Employment contract type | FT (Full-time), PT (Part-time), CT (Contract) |
 
-## 🔧 Advanced Features
+##  Advanced Features
 
 ### Feature Engineering
 
@@ -124,12 +108,11 @@ The system implements sophisticated feature engineering:
 
 ### Model Architecture
 
-```python
 # Ensemble Model Components
 - XGBoost Regressor (60% weight)
 - Gradient Boosting Regressor (40% weight)
 - Voting Regressor for final predictions
-```
+
 
 ### Data Validation
 
@@ -152,8 +135,6 @@ The system generates comprehensive visualizations:
 7. **Job Title Analysis**: Highest paying positions
 8. **Feature Importance**: Model feature rankings
 
-##  Model Evaluation
-
 ### Metrics Tracked
 
 - **MAE**: Mean Absolute Error
@@ -165,7 +146,7 @@ The system generates comprehensive visualizations:
 
 ### Performance Monitoring
 
-```python
+
 # Example output
 MODEL EVALUATION RESULTS
 ==================================================
@@ -183,27 +164,27 @@ CV_R²_std: 0.0234
 
 ### Save Trained Model
 
-```python
+
 model_path = predictor.save_model('my_salary_model')
-```
+
 
 ### Load Existing Model
 
-```python
+
 predictor = OptimizedSalaryPredictor()
 predictor.load_model('my_salary_model_20241201_143022.pkl')
-```
+
 
 ##  Sample Data Generation
 
 If you don't have a dataset, the system can generate sample data:
 
-```python
+
 from AI_Salary_Pridictor import create_sample_data
 
 # Generate 5000 sample records
 df = create_sample_data(n_samples=5000)
-```
+
 
 ##  Configuration
 
@@ -236,24 +217,19 @@ The system includes comprehensive error handling:
 
 Detailed logging is implemented throughout:
 
-```python
+
 # Log levels
 - INFO: General operation status
 - WARNING: Performance alerts
 - ERROR: Exception handling
-```
+
 
 
 
 ##  Future Enhancements
 
 - [ ] Web interface for predictions
-- [ ] Real-time data integration
-- [ ] Additional ML algorithms
-- [ ] Industry-specific models
 - [ ] API endpoint development
-- [ ] Docker containerization
-- [ ] Cloud deployment options
 
 
 **Note**: This system is designed for educational and research purposes. Always validate predictions with domain expertise and current market data.
